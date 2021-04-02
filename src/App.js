@@ -1,24 +1,57 @@
-import logo from './logo.svg';
+import React, { createContext, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
+import Admin from "./components/Admin/Admin";
+import CheckOut from "./components/CheckOut/CheckOut";
+import Contact from "./components/Contact/Contact";
+import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
+import Orders from "./components/Orders/Orders";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+
+// import firebase from "firebase/app";
+// import "firebase/auth";
+// import firebaseConfig from "./components/Login/firebase.config";
+
+// firebase.initializeApp(firebaseConfig);
+
+export const UserContext = createContext()
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/admin">
+            <Admin />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <PrivateRoute path="/orders">
+            <Orders />
+          </PrivateRoute>
+          <PrivateRoute path="/products/:productId">
+            <CheckOut />
+          </PrivateRoute>
+          <Route path ="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
