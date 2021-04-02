@@ -58,7 +58,7 @@ const Login = () => {
     return (
         <div className="my-5 py-5 text-center login-container">
             <Navbar></Navbar>
-            <button onClick={handleGoogleSignIn}>Sign In with Google</button>
+            <button onClick={handleGoogleSignIn} className="btn btn-info px-5">Sign In with Google</button>
 
         </div>
     );

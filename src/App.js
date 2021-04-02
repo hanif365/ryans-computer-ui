@@ -9,6 +9,7 @@ import './App.css';
 import Admin from "./components/Admin/Admin";
 import CheckOut from "./components/CheckOut/CheckOut";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Orders from "./components/Orders/Orders";
@@ -43,6 +44,7 @@ function App() {
           </PrivateRoute>
         </Switch>
       </Router>
+      <Footer></Footer>
     </UserContext.Provider>
   );
 }

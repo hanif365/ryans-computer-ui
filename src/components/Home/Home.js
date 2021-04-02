@@ -12,7 +12,7 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://lit-savannah-47451.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

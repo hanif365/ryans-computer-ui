@@ -50,11 +50,8 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav ms-auto">
                             <Link to="/home" className="nav-link active" aria-current="page">HOME</Link>
-                            {/* <Link to="/destination" className="nav-link">DESTINATION</Link> */}
-                            {/* <Link to="/blog" className="nav-link">BLOG</Link> */}
                             <Link to="/admin" className="nav-link">ADMIN</Link>
                             <Link to="/orders" className="nav-link">ORDERS</Link>
-                            {/* <Link to="/contact" className="nav-link">CONTACT</Link> */}
                             {
                                 loggedInUser.email ? <Link className="nav-link" id="user-name">{loggedInUser.name}</Link> : <Link to="/login" className="nav-link btn btn-info px-5">LOG IN</Link>
                             }

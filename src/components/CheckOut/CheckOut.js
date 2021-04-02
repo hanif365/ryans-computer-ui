@@ -14,7 +14,7 @@ const CheckOut = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://lit-savannah-47451.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data[0])
@@ -39,7 +39,7 @@ const CheckOut = () => {
             OrderTime: new Date().toDateString('dd/MM/yyyy')
 
         };
-        const url = `http://localhost:5000/addOrder`
+        const url = `https://lit-savannah-47451.herokuapp.com/addOrder`
 
         fetch(url, {
             method: 'POST',

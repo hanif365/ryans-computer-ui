@@ -19,7 +19,7 @@ const Admin = () => {
             Price: data.Price,
             Product_Description: data.Product_Description
         };
-        const url = `http://localhost:5000/addProduct`
+        const url = `https://lit-savannah-47451.herokuapp.com/addProduct`
         // console.log(data)
 
         // console.log(eventData);
@@ -59,7 +59,7 @@ const Admin = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://lit-savannah-47451.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
