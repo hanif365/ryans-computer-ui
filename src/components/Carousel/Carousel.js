@@ -17,24 +17,24 @@ const Carousel = () => {
                     <div className="carousel-item active">
                         <img src={bannerImg1} className="d-block w-100" alt="banner-img1" />
                         <div className="carousel-caption d-none d-md-block">
-                            <h1>Enjoyable journey</h1>
-                            <h4>A Enjoyable Journey With Reasonable fare</h4>
+                            <h1>Best Quality Laptop</h1>
+                            <h4>We Provide best quality laptop With Reasonable price</h4>
                         </div>
                     </div>
                     <div className="carousel-item">
                         {/* <img src="..." class="d-block w-100" alt="..."> */}
                         <img src={bannerImg2} className="d-block w-100" alt="banner-img2" />
                         <div className="carousel-caption d-none d-md-block">
-                            <h1>24 Hours Service</h1>
-                            <h4>We Provide 24 hours service with honesty.</h4>
+                            <h1>Life time free servicing</h1>
+                            <h4>We Provide 20 hours service with honesty.</h4>
                         </div>
                     </div>
                     <div className="carousel-item">
                         {/* <img src="..." class="d-block w-100" alt="..."> */}
                         <img src={bannerImg3} className="d-block w-100" alt="banner-img3" />
                         <div className="carousel-caption d-none d-md-block">
-                            <h1>Journey with Fun</h1>
-                            <h4>We also Provide many interesting game materials</h4>
+                            <h1>Best Quality and new generation product</h1>
+                            <h4>We also Provide many interesting gaming laptop</h4>
                         </div>
                     </div>
                 </div>

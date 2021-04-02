@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
 import Navbar from '../Navbar/Navbar';
 import Orders from '../Orders/Orders';
+import './CheckOut.css'
 
 
 const CheckOut = () => {
@@ -61,21 +62,41 @@ const CheckOut = () => {
     // }
 
     const history = useHistory();
-    const orderDetails = () =>{
+    const orderDetails = () => {
         history.push(`/orders`);
     }
 
     return (
-        <div className="my-5 py-5">
-            <Navbar></Navbar>
-            <h1>This is checkOut page</h1>
+        <div className="checkout-container">
+            <div className="row">
+                <div className="col">
+                    <div className="my-5 py-5">
+                        <Navbar></Navbar>
+                        {/* <h1>This is checkOut page</h1>
             <h2>Product Name: {products.Product_Name}</h2>
             <img src={products.imageURL} alt="product-image" />
             <h2>Price : {products.Price}</h2>
             <p>Product des: {products.Product_Description}</p>
             <button onClick={() => { orderPlaced(); orderDetails()}}>Checkout</button>
 
-            <h1>{loggedInUser.email}</h1>
+            <h1>{loggedInUser.email}</h1> */}
+
+
+                        <div class="card checkout text-center">
+                            <img src={products.imageURL} class="card-img-top" alt="product-image" />
+                            <div class="card-body">
+                                <h4 class="card-title">Product Name : {products.Product_Name}</h4>
+                                <h2>Quantity : 1</h2>
+                                <div className="d-flex justify-content-between">
+                                    <h2>${products.Price}</h2>
+                                    <button onClick={() => { orderPlaced(); orderDetails() }} class="btn btn-primary btn-checkout">CHECKOUT</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

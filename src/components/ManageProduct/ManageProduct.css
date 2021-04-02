@@ -1,3 +1,9 @@
 .manage-product img{
     width: 50px;
 }
+
+.product-content{
+   margin: 20px;
+    /* padding: 10px; */
+    border-bottom: 2px solid olivedrab;
+}

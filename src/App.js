@@ -14,11 +14,6 @@ import Login from "./components/Login/Login";
 import Orders from "./components/Orders/Orders";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
-// import firebase from "firebase/app";
-// import "firebase/auth";
-// import firebaseConfig from "./components/Login/firebase.config";
-
-// firebase.initializeApp(firebaseConfig);
 
 export const UserContext = createContext()
 
@@ -46,9 +41,6 @@ function App() {
           <PrivateRoute path="/products/:productId">
             <CheckOut />
           </PrivateRoute>
-          <Route path ="/contact">
-            <Contact />
-          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>

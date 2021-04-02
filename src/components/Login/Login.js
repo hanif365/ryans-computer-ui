@@ -5,8 +5,14 @@ import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App'
 import { useHistory, useLocation } from 'react-router';
 import Navbar from '../Navbar/Navbar';
+import './Login.css'
 
-firebase.initializeApp(firebaseConfig);
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+} else {
+    firebase.app(); // if already initialized
+}
 
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -50,10 +56,10 @@ const Login = () => {
             });
     }
     return (
-        <div className="my-5 py-5">
+        <div className="my-5 py-5 text-center login-container">
             <Navbar></Navbar>
             <button onClick={handleGoogleSignIn}>Sign In with Google</button>
-            
+
         </div>
     );
 };

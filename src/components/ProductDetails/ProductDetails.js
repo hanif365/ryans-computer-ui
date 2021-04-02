@@ -21,9 +21,7 @@ const ProductDetails = (props) => {
                     <p className="card-text">{Product_Description}</p>
                     <p>${Price}</p>
 
-                    <button onClick={() => handleProduct(_id)} className="btn btn-primary">Buy Now</button>
-                    {/* <a href= className="btn btn-primary">Buy Now</a> */}
-                    {/* <Link to={`/products/${_id}`}  className="btn btn-primary">Buy Now</Link> */}
+                    <button onClick={() => handleProduct(_id)} className="btn btn-info px-5">Buy Now</button>
                 </div>
             </div>
         </div>

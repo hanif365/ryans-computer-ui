@@ -13,4 +13,4 @@ Features :
 (4) Google sign in method used(make your site secure)
 
 
-Live site Link : https://ryans-computer1.web.app/# full-stack-client-hanif365
+Live site Link : https://ryans-computer1.web.app/ full-stack-client-hanif365

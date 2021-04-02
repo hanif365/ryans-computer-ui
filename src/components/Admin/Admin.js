@@ -67,14 +67,14 @@ const Admin = () => {
             })
     }, [])
     return (
-        <div className="container-fluid my-5 py-5">
+        <div className="container-fluid my-5 py-5 admin-container">
             <Navbar></Navbar>
             <div className="row">
                 <div className="col-md-3 d-flex flex-column">
                     {/* <Link to="/home">Home</Link> */}
-                    <button onClick={() => setShowManage(true)}>Manage Product</button>
-                    <button onClick={() => setShowManage(false)}>Add Product</button>
-                    <button>Edit Product</button>
+                    <button className="btn btn-info py-3" onClick={() => setShowManage(true)}>Manage Product</button>
+                    <button className="btn btn-info my-4 py-3" onClick={() => setShowManage(false)}>Add Product</button>
+                    <button className="btn btn-info py-3" >Edit Product</button>
                 </div>
                 <div className="col-md-9">
                     {showManage ? <div>
@@ -86,15 +86,22 @@ const Admin = () => {
                         <div>
                             <h1>Add Product</h1>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <input name="Product_Name" placeholder="Add Product Name" ref={register} />
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <input name="Product_Name" className="my-5 form-control" placeholder="Add Product Name" ref={register} />
 
-                                <input name="exampleRequired" type="file" onChange={handleImgUpload} />
+                                        <input name="exampleRequired" className="form-control" type="file" onChange={handleImgUpload} />
+                                    </div>
+                                    <div className="col-md-6">
+                                        <input name="Price" className="my-5 form-control" placeholder="Add Price" ref={register} />
 
-                                <input name="Price" placeholder="Add Price" ref={register} />
+                                        <input name="Product_Description" className=" form-control" placeholder="Add Product Description" ref={register} />
 
-                                <input name="Product_Description" placeholder="Add Product Description" ref={register} />
+                                    </div>
+                                </div>
 
-                                <input type="submit" />
+
+                                <input className="my-5  btn btn-info ps-4" type="submit" />
                             </form>
                         </div>
                     }

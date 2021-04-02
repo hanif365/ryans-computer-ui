@@ -1,0 +1,15 @@
+
+.checkout-container{
+    background-color: aqua;
+}
+.checkout{
+    width: 30rem;
+    padding: 2rem;
+    margin: auto !important;
+}
+.card-img-top{
+    /* width: 20rem; */
+}
+.btn-checkout{
+    /* margin-left: 150px; */
+}

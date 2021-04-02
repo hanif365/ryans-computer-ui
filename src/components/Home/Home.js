@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ProductDetails from '../ProductDetails/ProductDetails';
 import Carousel from '../Carousel/Carousel';
 import Navbar from '../Navbar/Navbar';
+import './Home.css'
 
 
 
@@ -19,7 +20,7 @@ const Home = () => {
             })
     }, [])
     return (
-        <div>
+        <div className="home-container">
             <Navbar></Navbar>
             <Carousel></Carousel>
             {
@@ -28,7 +29,9 @@ const Home = () => {
                 </div></div>
             }
 
-            <div className="d-flex flex-wrap m-auto">
+            <h1 className="text-center py-5 home-content">Our Product</h1>
+
+            <div className="d-flex flex-wrap m-auto home-content">
 
 
                 {

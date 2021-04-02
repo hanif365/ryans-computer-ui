@@ -1,0 +1,9 @@
+.order-container{
+    background-color: #a2d2ff;
+}
+.order-content{
+    background-color: #bde0fe;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.336);
+}

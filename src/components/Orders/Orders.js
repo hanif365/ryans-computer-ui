@@ -13,32 +13,31 @@ const Orders = () => {
             .then(data => setOrders(data));
     }, [])
 
-    // new code
-    // const [products, setProducts] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/products')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data)
-    //             setProducts(data)
-    //         })
-    // }, [])
 
     return (
-        <div className="py-5 my-5">
+        <div className="py-5 my-5 order-container">
             <Navbar></Navbar>
-            <h1>This is order page</h1>
-            <h3>You have {orders.length} Bookings</h3>
             {
-                orders.map(order => {
-                    return <div>
-                        <li>{order.Product_Name}</li>
-                        <li>{order.Price}</li>
-                        <li>{order.OrderTime}</li>
-                    </div>
-                })
+                loggedInUser && <h1 className="ms-5">You Log In with <span className="text-success">{loggedInUser.email}</span></h1>
             }
+            <div className="order-content container my-5">
+                <h3>You have {orders.length} Bookings</h3>
+                {
+                    orders.map(order => {
+                        return <div className="container ms-auto ps-5 ">
+                            <div className="row">
+                                <div className="col">
+                                    <h5>{order.Product_Name}</h5>
+                                    <h5>{order.Price}</h5>
+                                    <h5>{order.OrderTime}</h5>
+                                    <hr/>
+                                </div>
+                            </div>
+                        </div>
+                    })
+                }
+                <button className="btn btn-success ms-5 w-50">Confirm</button>
+            </div>
         </div>
     );
 };
