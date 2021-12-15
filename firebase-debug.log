@@ -1,0 +1,42 @@
+[debug] [2021-12-15T06:06:50.156Z] ----------------------------------------------------------------------
+[debug] [2021-12-15T06:06:50.159Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-12-15T06:06:50.160Z] CLI Version:   9.23.1
+[debug] [2021-12-15T06:06:50.160Z] Platform:      win32
+[debug] [2021-12-15T06:06:50.160Z] Node Version:  v16.13.0
+[debug] [2021-12-15T06:06:50.172Z] Time:          Wed Dec 15 2021 12:06:50 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-12-15T06:06:50.172Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-15T06:06:50.248Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-15T06:06:50.248Z] > authorizing via signed-in user (m.a.hanif365@gmail.com)
+[debug] [2021-12-15T06:06:50.248Z] [iam] checking project ryans-computer1 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-12-15T06:06:50.251Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-15T06:06:50.252Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-15T06:06:50.577Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 15 Dec 2021 06:06:46 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-15T06:06:50.590Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ryans-computer1:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-12-15T06:06:52.140Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Dec 2021 06:06:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1263","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-15T06:06:52.141Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project ryans-computer1:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2021-12-15T06:06:52.142Z] > refreshing access token with scopes: []
+[debug] [2021-12-15T06:06:52.142Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-15T06:06:52.398Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 15 Dec 2021 06:06:48 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-15T06:06:52.441Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ryans-computer1 [none]
+[debug] [2021-12-15T06:06:53.011Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ryans-computer1 403
+[debug] [2021-12-15T06:06:53.011Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ryans-computer1 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-12-15T06:06:53.011Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-12-15T06:06:53.249Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.request (C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:73:9)
+    at async C:\Users\M.A.Hanif\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project ryans-computer1. Please make sure the project exists and your account has permission to access it.
